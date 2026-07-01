@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --foreground-rgb: 249, 250, 251;
+  --background-start-rgb: 11, 15, 25;
+  --background-end-rgb: 11, 15, 25;
+  --primary: #3B82F6;
+  --primary-glow: rgba(59, 130, 246, 0.3);
+}
+
+.light {
+  --foreground-rgb: 15, 23, 42;
+  --background-start-rgb: 248, 250, 252;
+  --background-end-rgb: 248, 250, 252;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111827;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #3B82F6, #2563EB);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #60A5FA;
+}
+
+/* Glass morphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.light .glass {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #3B82F6 0%, #60A5FA 50%, #93C5FD 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient border */
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, #3B82F6, transparent, #3B82F6);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Animated gradient background */
+.animated-gradient-bg {
+  background: linear-gradient(-45deg, #0B0F19, #111827, #0f1a2e, #0B0F19);
+  background-size: 400% 400%;
+  animation: gradient-xy 15s ease infinite;
+}
+
+/* Glow effects */
+.glow-blue {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4), 0 0 40px rgba(59, 130, 246, 0.1);
+}
+
+.glow-blue-text {
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+}
+
+/* Selection */
+::selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: white;
+}
+
+/* Hero mesh gradient */
+.hero-mesh {
+  background-image: 
+    radial-gradient(ellipse at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(59, 130, 246, 0.08) 0%, transparent 50%);
+}
+
+/* Typing cursor */
+.typing-cursor::after {
+  content: '|';
+  animation: blink 0.75s step-end infinite;
+  color: #3B82F6;
+  margin-left: 2px;
+}
+
+/* Skill bar animation */
+.skill-bar {
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card hover */
+.card-hover {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+}
+
+/* Section fade up */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Noise overlay for texture */
+.noise-overlay::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Orbit animation */
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(110px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(110px) rotate(-360deg);
+  }
+}
+
+.orbit-icon {
+  animation: orbit var(--duration, 8s) linear infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+/* Particle dot */
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 50%;
+  animation: float var(--duration, 6s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+/* Timeline line */
+.timeline-line {
+  background: linear-gradient(180deg, #3B82F6 0%, transparent 100%);
+}
+
+/* Progress bar */
+.progress-fill {
+  background: linear-gradient(90deg, #2563EB 0%, #3B82F6 50%, #60A5FA 100%);
+}
+
+/* Grid background pattern */
+.grid-pattern {
+  background-image: linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Magnetic button */
+.magnetic-btn {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light mode adjustments */
+.dark\:hidden {
+  display: none;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Scrollbar for timeline */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
