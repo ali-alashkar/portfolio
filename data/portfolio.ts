@@ -303,6 +303,6 @@ export const portfolioData = {
 
   languages: [
     { name: "Arabic", level: "Native", flag: "🇪🇬", percentage: 100 },
-    { name: "English", level: "Professional (B1)", flag: "🇬🇧", percentage: 70 },
+    { name: "English", level: "Fluent (C1)", flag: "🇬🇧", percentage: 90 },
   ],
 };
