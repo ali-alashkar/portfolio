@@ -170,8 +170,21 @@ export const portfolioData = {
       title: "MERN Booking System",
       description:
         "A full-stack booking platform allowing users to browse services, make reservations, and manage bookings through a responsive interface with secure authentication.",
-      tech: ["React", "Node.js", "Express", "MongoDB", "REST API", "JavaScript"],
+      longDescription:
+        "A complete end-to-end booking platform built on the MERN stack. Users can register/login securely via JWT, browse available services, and manage their reservations in real time. The backend exposes a clean REST API built with Express and Node.js, backed by a MongoDB database for flexible, scalable data storage.",
+      tech: ["React", "Node.js", "Express", "MongoDB", "REST API", "JavaScript", "JWT", "Mongoose"],
       features: ["JWT Authentication", "CRUD Operations", "Booking Management", "Responsive UI", "REST Architecture"],
+      highlights: [
+        "JWT-based authentication with refresh tokens",
+        "RESTful API with full CRUD for bookings",
+        "MongoDB with Mongoose ODM for data modeling",
+        "Responsive React UI with real-time updates",
+        "Protected routes with role-based access",
+      ],
+      challenges:
+        "Designing a conflict-free booking slot algorithm and handling concurrent reservation requests without race conditions — solved using MongoDB transactions.",
+      status: "Completed",
+      image: "/project-mern-booking.png",
       github: "https://github.com/ali-alashkar/mern-booking-system",
       live: null,
       color: "from-blue-600 to-blue-400",
@@ -181,8 +194,21 @@ export const portfolioData = {
       title: "Gym Management System",
       description:
         "A full-featured desktop application built with Qt and C++ featuring membership management, workout tracking, and attendance systems.",
-      tech: ["C++", "Qt", "OOP", "GUI", "Desktop"],
+      longDescription:
+        "A robust cross-platform desktop application developed using Qt6 and C++ with modern OOP principles. The system handles complete gym operations — from member registration and subscription billing to workout plan assignments and daily attendance tracking. Built with Qt Widgets featuring a professional dark theme.",
+      tech: ["C++", "Qt6", "OOP", "SQLite", "GUI", "Desktop"],
       features: ["Membership Management", "Attendance Tracking", "Workout Plans", "Modern GUI", "OOP Design"],
+      highlights: [
+        "Fully object-oriented architecture with design patterns",
+        "SQLite local database for offline-first operation",
+        "Custom Qt Widgets for a professional desktop UI",
+        "Membership billing and subscription tracking",
+        "Attendance reports with date filtering",
+      ],
+      challenges:
+        "Building a responsive desktop UI with Qt that looks modern while maintaining performance for large member datasets required extensive custom widget styling and efficient SQL query design.",
+      status: "Completed",
+      image: "/project-gym.png",
       github: "https://github.com/ali-alashkar/Gym-Management-System",
       live: null,
       color: "from-emerald-600 to-emerald-400",
@@ -192,8 +218,21 @@ export const portfolioData = {
       title: "Student Attendance System",
       description:
         "A web-based student management and attendance system with real-time tracking, authentication, and comprehensive CRUD operations.",
-      tech: ["React", "Node.js", "MongoDB", "Express", "JavaScript"],
+      longDescription:
+        "A full-stack web application designed for academic institutions to digitize attendance tracking. Instructors can log in, manage their courses, mark attendance for each session, and generate detailed reports. Students have individual profiles with attendance statistics displayed visually.",
+      tech: ["React", "Node.js", "MongoDB", "Express", "JavaScript", "REST API", "Chart.js"],
       features: ["Attendance Management", "Student Profiles", "Authentication", "CRUD", "Reports"],
+      highlights: [
+        "Role-based access for instructors and admin",
+        "Visual attendance charts per student (Chart.js)",
+        "Session-by-session attendance logging",
+        "Export attendance reports to PDF/CSV",
+        "Responsive dashboard interface",
+      ],
+      challenges:
+        "Implementing real-time attendance updates without WebSockets — solved using efficient polling with React Query and optimistic UI updates.",
+      status: "Completed",
+      image: "/project-student.png",
       github: "https://github.com/ali-alashkar/Student-Management-Attendance-System",
       live: null,
       color: "from-purple-600 to-purple-400",
@@ -203,8 +242,21 @@ export const portfolioData = {
       title: "Cinema Management System",
       description:
         "Enterprise-grade cinema management platform with Spring Boot backend, React frontend, and MySQL database for movie bookings and customer management.",
-      tech: ["Java", "Spring Boot", "React", "MySQL", "REST API"],
+      longDescription:
+        "A full-stack cinema operations platform with a Spring Boot REST API and a React frontend. Features include a complete movie catalog, show scheduling, interactive seat selection, online ticket booking, and customer management. Built following clean layered architecture (Controller → Service → Repository) with Spring Security for auth.",
+      tech: ["Java", "Spring Boot", "React", "MySQL", "REST API", "Spring Security", "Hibernate", "JPA"],
       features: ["Movie Booking", "Customer Management", "Show Scheduling", "CRUD", "REST Backend"],
+      highlights: [
+        "Spring Boot layered architecture (MVC pattern)",
+        "Interactive seat selection with live availability",
+        "Spring Security with JWT authentication",
+        "Hibernate/JPA for database ORM",
+        "Fully documented REST API",
+      ],
+      challenges:
+        "Designing the seat reservation system to handle concurrent bookings without double-booking — implemented using DB-level locking with Spring's @Transactional annotation.",
+      status: "Completed",
+      image: "/project-cinema.png",
       github: "https://github.com/ali-alashkar/cinema-management-system",
       live: null,
       color: "from-orange-600 to-orange-400",
