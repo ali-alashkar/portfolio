@@ -84,7 +84,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 lg:py-32 relative bg-[#0B0F19]">
+    <section id="contact" className="py-24 lg:py-32 relative bg-white dark:bg-[#0B0F19]">
       <div className="absolute inset-0 hero-mesh opacity-50" />
       <div className="absolute inset-0 grid-pattern opacity-20" />
 

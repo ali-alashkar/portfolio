@@ -10,7 +10,7 @@ export default function Certifications() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="certifications" className="py-24 lg:py-32 relative bg-[#0B0F19]">
+    <section id="certifications" className="py-24 lg:py-32 relative bg-white dark:bg-[#0B0F19]">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-950/5 to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

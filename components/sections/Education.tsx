@@ -11,7 +11,7 @@ export default function Education() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="education" className="py-24 lg:py-32 relative bg-[#080c14]">
+    <section id="education" className="py-24 lg:py-32 relative bg-slate-50 dark:bg-[#080c14]">
       <div className="absolute inset-0 grid-pattern opacity-20" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading

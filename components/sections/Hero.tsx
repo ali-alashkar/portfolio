@@ -89,7 +89,7 @@ export default function Hero() {
     <section
       id="home"
       ref={ref}
-      className="relative min-h-screen flex items-center overflow-hidden bg-[#0B0F19]"
+      className="relative min-h-screen flex items-center overflow-hidden bg-slate-50 dark:bg-[#0B0F19]"
     >
       {/* Animated background */}
       <div className="absolute inset-0 hero-mesh" />
@@ -127,10 +127,10 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.3 }}
             >
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight">
-                <span className="text-white">Ali</span>{" "}
+                <span className="text-slate-900 dark:text-white">Ali</span>{" "}
                 <span className="gradient-text">Haitham</span>
                 <br />
-                <span className="text-white text-3xl sm:text-4xl lg:text-5xl">Alashkar</span>
+                <span className="text-slate-900 dark:text-white text-3xl sm:text-4xl lg:text-5xl">Alashkar</span>
               </h1>
             </motion.div>
 
@@ -139,7 +139,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="text-xl sm:text-2xl font-semibold text-gray-300 h-9 flex items-center"
+              className="text-xl sm:text-2xl font-semibold text-slate-700 dark:text-gray-300 h-9 flex items-center"
             >
               <TypingEffect texts={portfolioData.personal.titles} />
             </motion.div>
@@ -149,7 +149,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-gray-400 text-base leading-relaxed max-w-lg"
+              className="text-slate-600 dark:text-gray-400 text-base leading-relaxed max-w-lg"
             >
               CS student at{" "}
               <span className="text-blue-400 font-medium">Ain Shams University</span>{" "}
@@ -176,7 +176,7 @@ export default function Hero() {
                 onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="flex items-center gap-2 px-6 py-3 rounded-xl glass border border-white/10 hover:border-blue-500/30 text-white font-semibold transition-all duration-200 hover:bg-blue-500/5"
+                className="flex items-center gap-2 px-6 py-3 rounded-xl glass border border-white/10 hover:border-blue-500/30 text-slate-800 dark:text-white font-semibold transition-all duration-200 hover:bg-blue-500/5"
               >
                 <Send className="w-4 h-4" />
                 Contact Me
@@ -202,7 +202,7 @@ export default function Hero() {
                   transition={{ delay: 0.9 + i * 0.1 }}
                   whileHover={{ scale: 1.15, y: -3 }}
                   whileTap={{ scale: 0.9 }}
-                  className={`w-10 h-10 rounded-xl glass border border-white/10 flex items-center justify-center text-gray-400 ${color} hover:border-white/20 transition-all duration-200`}
+                  className={`w-10 h-10 rounded-xl glass border border-white/10 flex items-center justify-center text-slate-600 dark:text-gray-400 ${color} hover:border-blue-500/20 dark:hover:border-white/20 transition-all duration-200`}
                 >
                   <Icon className="w-4 h-4" />
                 </motion.a>
@@ -225,7 +225,7 @@ export default function Hero() {
                   className="glass rounded-xl p-3 text-center border border-white/5"
                 >
                   <div className="text-xl font-bold gradient-text">{stat.value}</div>
-                  <div className="text-[10px] text-gray-500 mt-0.5 leading-tight">{stat.label}</div>
+                  <div className="text-[10px] text-slate-500 dark:text-gray-500 mt-0.5 leading-tight">{stat.label}</div>
                 </motion.div>
               ))}
             </motion.div>
@@ -289,7 +289,7 @@ export default function Hero() {
               >
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                  <span className="text-sm text-gray-300 font-medium">Available for hire</span>
+                  <span className="text-sm text-slate-700 dark:text-gray-300 font-medium">Available for hire</span>
                 </div>
               </motion.div>
             </div>

@@ -9,7 +9,7 @@ export default function Languages() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="languages" className="py-16 relative bg-[#080c14]">
+    <section id="languages" className="py-16 relative bg-slate-50 dark:bg-[#080c14]">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           label="Languages"

@@ -19,7 +19,7 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-24 lg:py-32 relative bg-[#0B0F19]">
+    <section id="about" className="py-24 lg:py-32 relative bg-white dark:bg-[#0B0F19]">
       {/* Subtle gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-950/5 to-transparent" />
 
@@ -53,8 +53,8 @@ export default function About() {
                 {/* Overlay badge */}
                 <div className="absolute bottom-4 left-4 right-4">
                   <div className="glass rounded-xl px-4 py-3 border border-white/10">
-                    <p className="text-white font-semibold text-sm">Ali Haitham Ali Alashkar</p>
-                    <p className="text-blue-400 text-xs mt-0.5">Backend Developer · CS Student</p>
+                    <p className="text-slate-900 dark:text-white font-semibold text-sm">Ali Haitham Ali Alashkar</p>
+                    <p className="text-blue-600 dark:text-blue-400 text-xs mt-0.5">Backend Developer · CS Student</p>
                   </div>
                 </div>
               </div>
@@ -68,7 +68,7 @@ export default function About() {
               >
                 <div className="text-center">
                   <div className="text-2xl font-bold gradient-text">3+</div>
-                  <div className="text-xs text-gray-400">Years Building</div>
+                  <div className="text-xs text-slate-600 dark:text-gray-400">Years Building</div>
                 </div>
               </motion.div>
             </div>
@@ -82,7 +82,7 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.2 + i * 0.15 }}
-                className="text-gray-400 leading-relaxed text-[15px]"
+                className="text-slate-600 dark:text-gray-400 leading-relaxed text-[15px]"
               >
                 {para}
               </motion.p>
@@ -101,7 +101,7 @@ export default function About() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ delay: 0.8 + i * 0.1 }}
-                  className="flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/10 text-sm text-gray-300 hover:border-blue-500/30 hover:text-white transition-colors duration-200"
+                  className="flex items-center gap-2 px-4 py-2 rounded-full glass border border-white/10 text-sm text-slate-700 dark:text-gray-300 hover:border-blue-500/30 dark:hover:text-white transition-colors duration-200"
                 >
                   <span>{h.icon}</span>
                   {h.label}
@@ -123,8 +123,8 @@ export default function About() {
                 { label: "Status", value: "Open to Work ✅" },
               ].map((item, i) => (
                 <GlassCard key={i} className="p-4">
-                  <p className="text-xs text-gray-500 mb-1">{item.label}</p>
-                  <p className="text-sm text-white font-medium">{item.value}</p>
+                  <p className="text-xs text-slate-500 dark:text-gray-500 mb-1">{item.label}</p>
+                  <p className="text-sm text-slate-800 dark:text-white font-medium">{item.value}</p>
                 </GlassCard>
               ))}
             </motion.div>

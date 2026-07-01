@@ -10,7 +10,7 @@ export default function Projects() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="projects" className="py-24 lg:py-32 relative bg-[#080c14]">
+    <section id="projects" className="py-24 lg:py-32 relative bg-slate-50 dark:bg-[#080c14]">
       <div className="absolute inset-0 grid-pattern opacity-20" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,21 +64,21 @@ export default function Projects() {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors duration-200">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors duration-200">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                <p className="text-slate-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
                   {project.description}
                 </p>
 
                 {/* Features */}
                 <div className="mb-5">
-                  <p className="text-xs font-semibold text-gray-500 uppercase tracking-widest mb-2">Features</p>
+                  <p className="text-xs font-semibold text-slate-500 dark:text-gray-500 uppercase tracking-widest mb-2">Features</p>
                   <div className="flex flex-wrap gap-1.5">
                     {project.features.map((f) => (
                       <span
                         key={f}
-                        className="flex items-center gap-1 text-xs text-gray-400 bg-white/5 border border-white/8 px-2.5 py-1 rounded-lg"
+                        className="flex items-center gap-1 text-xs text-slate-600 dark:text-gray-400 bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/8 px-2.5 py-1 rounded-lg"
                       >
                         <ChevronRight className="w-2.5 h-2.5 text-blue-400" />
                         {f}
@@ -95,7 +95,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.04 }}
                     whileTap={{ scale: 0.96 }}
-                    className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl glass border border-white/10 hover:border-blue-500/30 text-gray-300 hover:text-white text-sm font-medium transition-all duration-200"
+                    className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl glass border border-white/10 hover:border-blue-500/30 text-slate-700 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-all duration-200"
                   >
                     <Github className="w-4 h-4" />
                     View Code
